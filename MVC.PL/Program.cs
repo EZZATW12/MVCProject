@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using MVC.DAL.persistence.Data;
+
 namespace MVC.PL
 {
     public class Program
@@ -8,7 +11,11 @@ namespace MVC.PL
             #region Configure Services
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews(); 
+            builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ApplicationDbContext>((optionsBuilder) =>
+            {
+                optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
             #endregion
 
             var app = builder.Build();

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC.DAL.persistance.Data
+namespace MVC.DAL.persistence.Data
 {
     internal class DbContextSeed
     {

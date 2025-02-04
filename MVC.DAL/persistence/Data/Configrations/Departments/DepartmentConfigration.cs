@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MVC.DAL.persistance.Data.Configrations.Departments
+namespace MVC.DAL.persistence.Data.Configrations.Departments
 {
     internal class DepartmentConfigration : IEntityTypeConfiguration<Department>
     {
