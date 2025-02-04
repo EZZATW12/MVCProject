@@ -15,7 +15,7 @@ namespace MVC.PL
             builder.Services.AddDbContext<ApplicationDbContext>((optionsBuilder) =>
             {
                 optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
+            }); 
             #endregion
 
             var app = builder.Build();
